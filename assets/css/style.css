@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+}
+
+img {
+  /* content: url('../images/980-index.jpg'); */
+  max-width: 100%;
+  height: auto;
+}
+
+/* @media only screen and (max-width: 768px) {
+  img {
+    content: url('../images/768-index.jpg');
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  img {
+    content: url('../images/640-index.jpg');
+  }
+} */
