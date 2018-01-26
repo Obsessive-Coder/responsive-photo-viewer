@@ -1,4 +1,3 @@
-// $(document).ready(function() {
 // Get the page name for displaying correct images.
 var pageName = getPageFromURI(document.documentURI);
 
@@ -9,21 +8,18 @@ setInterval(function() {
   // Screen with is 980px or greater.
   if (screenWidth >= 980) {
     document.getElementById('responsive-image').style.content = 'url("assets/images/980-' + pageName + '.jpg")';
-    // $('img').css('content', 'url("assets/images/980-' + pageName + '.jpg")');
     return true;
   }
 
   // Screen width is between 768px and 979px.
   if (screenWidth >= 768 && screenWidth <= 979) {
     document.getElementById('responsive-image').style.content = 'url("assets/images/768-' + pageName + '.jpg")';
-    // $('img').css('content', 'url("assets/images/768-' + pageName + '.jpg")');
     return true;
   }
 
   // Screen width is 640px or less.
   if (screenWidth <= 640) {
     document.getElementById('responsive-image').style.content = 'url("assets/images/640-' + pageName + '.jpg")';
-    // $('img').css('content', 'url("assets/images/640-' + pageName + '.jpg")');
     return true;
   }
 
@@ -35,4 +31,3 @@ function getPageFromURI(uri) {
   var splitURI = uri.split('/');
   return splitURI[splitURI.length - 1].replace('.html', '');
 }
-// });
