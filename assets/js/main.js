@@ -1,6 +1,11 @@
-window.addEventListener("resize", function() {
+var pageName;
+
+window.addEventListener("load", function() {
   // Get the page name for displaying correct images.
-  var pageName = getPageFromURI(document.documentURI);
+  pageName = getPageFromURI(document.documentURI);
+});
+
+window.addEventListener("resize", function() {
 
   var screenWidth = screen.width;
   var element = document.getElementById('responsive-image');
