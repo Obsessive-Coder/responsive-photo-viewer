@@ -1,4 +1,4 @@
-var pageName;
+var pageName = "index";
 
 window.addEventListener("load", function() {
   // Get the page name for displaying correct images.
