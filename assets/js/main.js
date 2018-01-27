@@ -1,4 +1,4 @@
-var pageName = "index";
+var pageName;
 
 window.addEventListener("load", function() {
   // Get the page name for displaying correct images.
@@ -40,5 +40,11 @@ window.addEventListener("resize", function() {
 // Get the name of the page from the uri.
 function getPageFromURI(uri) {
   var splitURI = uri.split('/');
-  return splitURI[splitURI.length - 1].replace('.html', '');
+  var pageName = splitURI[splitURI.length - 1].replace('.html', '');
+
+  if (!pageName) {
+    pageName = "index";
+  }
+
+  return pageName;
 }
