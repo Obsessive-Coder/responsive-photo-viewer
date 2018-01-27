@@ -1,9 +1,4 @@
-// Get the page name for displaying correct images.
-var pageName = getPageFromURI(document.documentURI);
-
-// Check the screen size 4 times per second
-// and show the correct image accordingly.
-setInterval(function() {
+window.addEventListener("resize", function() {
   var screenWidth = screen.width;
   var element = document.getElementById('responsive-image');
 
@@ -32,10 +27,19 @@ setInterval(function() {
   }
 
   return false;
-}, 250);
+}, false);
 
 // Get the name of the page from the uri.
 function getPageFromURI(uri) {
   var splitURI = uri.split('/');
   return splitURI[splitURI.length - 1].replace('.html', '');
 }
+
+// Get the page name for displaying correct images.
+var pageName = getPageFromURI(document.documentURI);
+
+// Check the screen size 4 times per second
+// and show the correct image accordingly.
+// setInterval(function() {
+//
+// }, 250);
