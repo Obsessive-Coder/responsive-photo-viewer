@@ -1,3 +1,6 @@
+// Get the page name for displaying correct images.
+var pageName = getPageFromURI(document.documentURI);
+
 window.addEventListener("resize", function() {
   var screenWidth = screen.width;
   var element = document.getElementById('responsive-image');
@@ -34,6 +37,3 @@ function getPageFromURI(uri) {
   var splitURI = uri.split('/');
   return splitURI[splitURI.length - 1].replace('.html', '');
 }
-
-// Get the page name for displaying correct images.
-var pageName = getPageFromURI(document.documentURI);
