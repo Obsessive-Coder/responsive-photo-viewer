@@ -37,9 +37,3 @@ function getPageFromURI(uri) {
 
 // Get the page name for displaying correct images.
 var pageName = getPageFromURI(document.documentURI);
-
-// Check the screen size 4 times per second
-// and show the correct image accordingly.
-// setInterval(function() {
-//
-// }, 250);
