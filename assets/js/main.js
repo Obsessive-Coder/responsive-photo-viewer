@@ -1,13 +1,11 @@
 var pageName;
 
-window.addEventListener("load", function() {
+$(window).on("load", function () {
   // Get the page name for displaying correct images.
   pageName = getPageFromURI(document.documentURI);
 });
-
-window.addEventListener("resize", function() {
-
-  var screenWidth = screen.width;
+setInterval(function () {
+  var screenWidth = $(document).width();
   var element = document.getElementById('responsive-image');
 
   // Screen with is 980px or greater.
@@ -35,8 +33,7 @@ window.addEventListener("resize", function() {
   }
 
   return false;
-}, false);
-
+}, 250);
 // Get the name of the page from the uri.
 function getPageFromURI(uri) {
   var splitURI = uri.split('/');
