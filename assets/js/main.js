@@ -12,15 +12,15 @@ $(window).on('load resize', function() {
 
   // Larger than 980px
   if (isWithinRange(screenWidth, 981, 999999999999999999)) {
-    if (!isImageShown(imageSRC, imagePath, 'full', pageName, '.png')) {
-      $(image).attr('src', imagePath + 'full-' + pageName + '.png');
+    if (!isImageShown(imageSRC, imagePath, 'full', pageName)) {
+      $(image).attr('src', imagePath + 'full-' + pageName + '.jpg');
     }
     return true;
   }
 
   //  980px
   if (isWithinRange(screenWidth, 769, 980)) {
-    if (!isImageShown(imageSRC, imagePath, '980', pageName, '.jpg')) {
+    if (!isImageShown(imageSRC, imagePath, '980', pageName)) {
       $(image).attr('src', imagePath + '980-' + pageName + '.jpg');
     }
     return true;
@@ -28,7 +28,7 @@ $(window).on('load resize', function() {
 
   // 768px
   if (isWithinRange(screenWidth, 641, 768)) {
-    if (!isImageShown(imageSRC, imagePath, '768', pageName, '.jpg')) {
+    if (!isImageShown(imageSRC, imagePath, '768', pageName)) {
       $(image).attr('src', imagePath + '768-' + pageName + '.jpg');
     }
     return true;
@@ -37,7 +37,7 @@ $(window).on('load resize', function() {
   // 640px or less.
   if (isWithinRange(screenWidth, 0, 640)) {
     // if (screenWidth <= 640) {
-    if (!isImageShown(imageSRC, imagePath, '640', pageName, '.jpg')) {
+    if (!isImageShown(imageSRC, imagePath, '640', pageName)) {
       $(image).attr('src', imagePath + '640-' + pageName + '.jpg');
     }
     return true;
@@ -54,8 +54,8 @@ function isWithinRange(screenWidth, min, max) {
 }
 
 // Is Image Shown
-function isImageShown(imageSRC, imagePath, size, pageName, fileType) {
-  if (imageSRC == imagePath + size + pageName + fileType) {
+function isImageShown(imageSRC, imagePath, size, pageName) {
+  if (imageSRC == imagePath + size + pageName + '.jpg') {
     return true;
   }
   return false;
