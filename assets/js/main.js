@@ -1,10 +1,5 @@
 $(document).ready(function() {
-  var pageName;
-
-  $(window).on("load", function() {
-    // Get the page name for displaying correct images.
-    pageName = getPageFromURI(document.documentURI);
-  });
+  var pageName = getPageFromURI(document.documentURI);
 
   // setInterval(function() {
 
@@ -23,7 +18,7 @@ $(document).ready(function() {
     }
 
     //  980px
-    if (screenWidth >= 769 && screenWidth <= 980) {
+    if (isWithinRange(screenWidth, 769, 980)) {
       if (!isImageShown(imageSRC, imagePath, '980', pageName, '.jpg')) {
         $(image).attr('src', imagePath + '980-' + pageName + '.jpg');
       }
@@ -31,7 +26,7 @@ $(document).ready(function() {
     }
 
     // 768px
-    if (screenWidth >= 641 && screenWidth <= 768) {
+    if (isWithinRange(screenWidth, 641, 768)) {
       if (!isImageShown(imageSRC, imagePath, '768', pageName, '.jpg')) {
         $(image).attr('src', imagePath + '768-' + pageName + '.jpg');
       }
@@ -48,6 +43,13 @@ $(document).ready(function() {
 
     return false;
   });
+
+  function isWithinRange(screenWidth, min, max) {
+    if (screenWidth >= min && screenWidth <= max) {
+      return true;
+    }
+    return false;
+  }
 
   // Is Image Shown
   function isImageShown(imageSRC, imagePath, size, pageName, fileType) {
