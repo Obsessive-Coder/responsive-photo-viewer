@@ -1,6 +1,6 @@
 <h1 align="center">Responsive Photo Viewer</h1>
 <p align="center">
-  <a href="https://obsessive-coder.github.io/Weather-App/">Live preview</a>
+  <a href="https://obsessive-coder.github.io/responsive-photo-viewer/">Live preview</a>
 </p>
 <br>
 <p>
